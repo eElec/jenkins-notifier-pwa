@@ -4,7 +4,8 @@
 	"version": "0.0.0",
 	"scripts": {
 		"dev": "vite --open",
-		"build": "set NODE_ENV=production tsc && vite build",
+		"build": "tsc && vite build",
+		"build:dev": "tsc && vite build --mode development",
 		"preview": "vite preview"
 	},
 	"dependencies": {

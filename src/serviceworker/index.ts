@@ -10,10 +10,8 @@ declare let self: ServiceWorkerGlobalScope;
 
 console.log('😀');
 
-if (import.meta.env.MODE === 'production') {
-	cleanupOutdatedCaches();
-	precacheAndRoute(self.__WB_MANIFEST);
-}
+cleanupOutdatedCaches();
+precacheAndRoute(self.__WB_MANIFEST);
 
 let timer: NodeJS.Timer | null = null;
 // TODO: Sync interval with UI

@@ -1,0 +1,8 @@
+[context.production]
+command = "yarn build"
+
+[context.branch-deploy]
+command = "yarn build:dev"
+
+[context.deploy-preview]
+command = "yarn build:dev"

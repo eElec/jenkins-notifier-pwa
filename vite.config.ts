@@ -55,18 +55,6 @@ export default defineConfig({
 		}),
 	],
 	build: {
-		rollupOptions: {
-			input: {
-				app: './index.html',
-				'service-worker': './src/serviceworker/index.ts',
-			},
-			output: {
-				entryFileNames: (assetInfo) => {
-					return assetInfo.name === 'service-worker'
-						? 'serviceWorker.js' // put service worker in root
-						: '[name]-[hash].js'; // others in `assets/js/`
-				},
-			},
-		},
+		sourcemap: process.env.NODE_ENV === 'development',
 	},
 });
