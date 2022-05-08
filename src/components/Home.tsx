@@ -1,14 +1,34 @@
 import React from 'react';
-import { AppBar, Button, Container, Toolbar, Typography } from '@mui/material';
+import {
+	AppBar,
+	Button,
+	Container,
+	IconButton,
+	Toolbar,
+	Typography,
+	useTheme,
+} from '@mui/material';
 import DetailsTable from './DetailsTable';
 import AddDialog from './AddDialog';
 import Settings from './Settings';
 import ServerDialog from './ServerDialog';
+import {
+	Brightness4,
+	Brightness7,
+	Settings as SettingsIcon,
+} from '@mui/icons-material';
 
-function Home() {
+interface HomeProps {
+	toggleTheme: () => void;
+}
+
+function Home(props: HomeProps) {
+	const { toggleTheme } = props;
 	const [addOpen, setAddOpen] = React.useState(false);
 	const [settingsOpen, setSettingsOpen] = React.useState(false);
 	const [serverOpen, setServerOpen] = React.useState(false);
+
+	const theme = useTheme();
 
 	const handleAddDialogState = (val: boolean) => setAddOpen(val);
 	const handleSettingsDialogState = (val: boolean) => setSettingsOpen(val);
@@ -17,13 +37,19 @@ function Home() {
 		<>
 			<AppBar position="static">
 				<Toolbar>
-					<Button
+					<IconButton
+						onClick={toggleTheme}
 						color="inherit"
-						onClick={() => handleSettingsDialogState(true)}
 						sx={{ marginLeft: 'auto' }}
 					>
-						Settings
-					</Button>
+						{theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+					</IconButton>
+					<IconButton
+						color="inherit"
+						onClick={() => handleSettingsDialogState(true)}
+					>
+						<SettingsIcon />
+					</IconButton>
 				</Toolbar>
 			</AppBar>
 			<Container>
