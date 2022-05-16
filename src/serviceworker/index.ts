@@ -51,7 +51,10 @@ async function checkStatus() {
 		const resp = await job.getStatus(db);
 		if (resp === null) return;
 		processStatus(job, resp);
-		db.job.update(job, { ...resp });
+		db.job.update(job, {
+			...resp,
+			currentStatus: resp.result ?? job.currentStatus,
+		});
 	});
 }
 

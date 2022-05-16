@@ -12,6 +12,7 @@ import DetailsTable from './DetailsTable';
 import AddDialog from './AddDialog';
 import Settings from './Settings';
 import ServerDialog from './ServerDialog';
+import { css } from '@emotion/react';
 import {
 	Brightness4,
 	Brightness7,
@@ -35,23 +36,27 @@ function Home(props: HomeProps) {
 	const handleServerDialogState = (val: boolean) => setServerOpen(val);
 	return (
 		<>
-			<AppBar position="static">
-				<Toolbar>
-					<IconButton
-						onClick={toggleTheme}
-						color="inherit"
-						sx={{ marginLeft: 'auto' }}
-					>
-						{theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
-					</IconButton>
-					<IconButton
-						color="inherit"
-						onClick={() => handleSettingsDialogState(true)}
-					>
-						<SettingsIcon />
-					</IconButton>
-				</Toolbar>
-			</AppBar>
+			<div
+				css={css({
+					display: 'flex',
+					justifyContent: 'end',
+					padding: '8px',
+				})}
+			>
+				<IconButton
+					onClick={toggleTheme}
+					color="inherit"
+					sx={{ marginLeft: 'auto' }}
+				>
+					{theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+				</IconButton>
+				<IconButton
+					color="inherit"
+					onClick={() => handleSettingsDialogState(true)}
+				>
+					<SettingsIcon />
+				</IconButton>
+			</div>
 			<Container>
 				<DetailsTable openAddDialog={() => handleAddDialogState(true)} />
 			</Container>

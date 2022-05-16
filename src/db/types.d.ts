@@ -1,5 +1,7 @@
+export type IJobStatus = 'SUCCESS' | 'FAILURE' | 'UNSTABLE';
+
 export interface IJobResponse {
-	result?: 'SUCCESS' | 'FAILURE' | 'UNSTABLE';
+	result?: IJobStatus;
 	number?: number;
 	building?: boolean;
 	timestamp?: number;
@@ -13,7 +15,7 @@ export interface IJob extends IJobResponse {
 	alias: string;
 	paused: boolean;
 	server: string;
-	currentStatus?: 'SUCCESS' | 'FAILURE' | 'UNSTABLE';
+	currentStatus?: IJobStatus;
 }
 
 export interface IServer {
