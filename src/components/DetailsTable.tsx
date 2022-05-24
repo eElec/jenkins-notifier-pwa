@@ -94,6 +94,20 @@ function DetailsTable(props: any) {
 								{job.alias}
 							</TableCell>
 							<TableCell align="right">
+								<IconButton
+									onClick={(ev) => {
+										window
+											.open(
+												`${job.server}/job/${job.name}${
+													ev.altKey ? '/lastBuild' : ''
+												}`,
+												'_blank'
+											)
+											?.focus();
+									}}
+								>
+									<OpenInNew />
+								</IconButton>
 								<IconButton>
 									{job.paused ? (
 										<StopCircleOutlined color="error" />
