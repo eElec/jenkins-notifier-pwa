@@ -63,11 +63,15 @@ function processStatus(job: Job, resp: IJobResponse) {
 		return;
 
 	if (job.number !== resp.number && resp.building) {
+		const estTime = new Date();
+		if(resp.estimatedDuration)
+			estTime.setTime(estTime.getTime() + resp.estimatedDuration)
+
 		self.registration.showNotification(
 			`Job '${job.alias} #${resp.number}' Started`,
 			{
 				body: resp.estimatedDuration
-					? `Estimated Duration: ${msToTime(resp.estimatedDuration)}`
+					? `Est: ${estTime.toTimeString().substring(0, 8)} (${msToTime(resp.estimatedDuration)})`
 					: undefined,
 			}
 		);
@@ -90,8 +94,6 @@ function msToTime(s: number) {
 		':' +
 		pad(((s % 3.6e6) / 6e4) | 0) +
 		':' +
-		pad(((s % 6e4) / 1000) | 0) +
-		'.' +
-		pad(s % 1000, 3)
+		pad(((s % 6e4) / 1000) | 0)
 	);
 }
