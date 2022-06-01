@@ -40,11 +40,16 @@ const subscribe = async (reg: ServiceWorkerRegistration) => {
 	if (subscription === undefined) return;
 
 	try {
-		await fetch(`${VITE_PUSH_SERVER}/jenkins/subscribe`, {
+		let interval: number = parseInt(localStorage.getItem('interval') ?? '1', 10);
+		if(interval > 59){
+			interval = 1;
+			localStorage.setItem('interval', interval.toString());
+		}
+		await fetch(`${VITE_PUSH_SERVER}/subscribe`, {
 			method: 'POST',
 			body: JSON.stringify({
 				subscription,
-				interval: parseInt(localStorage.getItem('interval') ?? '60000', 10),
+				interval,
 			}),
 			headers: {
 				'content-type': 'application/json',

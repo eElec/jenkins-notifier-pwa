@@ -35,7 +35,7 @@ function Settings(props: SettingsProps) {
 	const { open, handleClose } = props;
 
 	const [formValues, setFormValues] = React.useState({
-		interval: parseInt(localStorage.getItem('interval') ?? '60000', 10),
+		interval: parseInt(localStorage.getItem('interval') ?? '1', 10),
 	});
 	const [pushRegistered, setPushRegistered] = React.useState(false);
 	const [notificationEnabled, setNotificationEnabled] = React.useState(
