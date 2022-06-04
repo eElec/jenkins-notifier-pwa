@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
 	Button,
 	Table,
@@ -17,7 +17,7 @@ import {
 	PlayCircleOutline,
 	StopCircleOutlined,
 } from '@mui/icons-material';
-import { Theme } from '@mui/system';
+import { Theme, useTheme } from '@mui/system';
 import { useLiveQuery } from 'dexie-react-hooks';
 // import db from '@src/db';
 import styled from '@emotion/styled';
@@ -79,7 +79,7 @@ function DetailsTable(props: any) {
 
 	return (
 		<TableContainer component={Paper} sx={{ marginTop: '2rem' }}>
-			<Table>
+			<Table size="small">
 				<TableHead>
 					<TableRow>
 						<TableCell>Job</TableCell>
@@ -88,7 +88,7 @@ function DetailsTable(props: any) {
 				</TableHead>
 				<TableBody>
 					{jobs?.map((job) => (
-						<TableRow key={job._id}>
+						<TableRow key={job._id} sx={{ position: 'relative' }}>
 							<TableCell>
 								<Status status={job.currentStatus} building={job.building} />
 								{job.alias}
