@@ -12,11 +12,11 @@ export class Job implements IJob {
 	server!: string;
 	currentStatus?: 'SUCCESS' | 'FAILURE' | 'UNSTABLE' | undefined;
 	result?: 'SUCCESS' | 'FAILURE' | 'UNSTABLE' | undefined;
-	number?: number | undefined;
-	building?: boolean | undefined;
-	timestamp?: number | undefined;
-	duration?: number | undefined;
-	estimatedDuration?: number | undefined;
+	number?: number;
+	building?: boolean;
+	timestamp?: number;
+	duration?: number;
+	estimatedDuration?: number;
 
 	async getServer(db: LocalDB) {
 		return db.server.get(this.server).then((srv) => srv?.getFetchRequest());
