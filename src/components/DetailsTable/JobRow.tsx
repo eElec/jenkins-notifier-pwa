@@ -39,6 +39,12 @@ function JobRow({ job, children }: Props) {
 					)}
 				</IconButton>
 			</TableCell>
+			{job.building && job.timestamp && job.estimatedDuration && (
+				<Progress
+					startTime={job.timestamp}
+					estDuration={job.estimatedDuration}
+				/>
+			)}
 			{children}
 		</TableRow>
 	);
