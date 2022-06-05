@@ -15,7 +15,12 @@
 		"isolatedModules": true,
 		"noEmit": true,
 		"jsx": "react-jsx",
-		"paths": { "virtual:pwa-register": ["./node_modules/vite-plugin-pwa"] }
+		"paths": {
+			"virtual:pwa-register": ["./node_modules/vite-plugin-pwa"],
+			"@src/*": ["./src/*"],
+			"@db/*": ["./src/db/*"],
+			"@sw/*": ["./src/serviceworker/*"]
+		}
 	},
 	"include": ["src"],
 	"references": [{ "path": "./tsconfig.node.json" }],

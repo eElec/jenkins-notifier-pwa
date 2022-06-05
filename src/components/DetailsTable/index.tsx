@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import {
 	Button,
 	Table,
@@ -9,21 +9,12 @@ import {
 	TableRow,
 	Paper,
 	TableFooter,
-	IconButton,
 } from '@mui/material';
 import {
 	Add,
-	OpenInNew,
-	PlayCircleOutline,
-	StopCircleOutlined,
 } from '@mui/icons-material';
-import { Theme, useTheme } from '@mui/system';
 import { useLiveQuery } from 'dexie-react-hooks';
-// import db from '@src/db';
-import styled from '@emotion/styled';
-import { css, keyframes } from '@emotion/react';
-import db from '../../db/index';
-import { IJobStatus } from '../../db/types';
+import db from '@db/index';
 import JobRow from './JobRow';
 
 function DetailsTable(props: any) {

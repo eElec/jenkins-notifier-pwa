@@ -1,9 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
+const path = require('path');
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+	resolve: {
+		alias: {
+			'@src': path.resolve(__dirname, './src/'),
+			'@db': path.resolve(__dirname, './src/db'),
+			'@sw': path.resolve(__dirname, './src/serviceworker'),
+		},
+	},
 	plugins: [
 		react({
 			jsxImportSource: '@emotion/react',
@@ -20,7 +28,7 @@ export default defineConfig(({ mode }) => ({
 			],
 			manifest: {
 				name: 'Jenkins Notifier',
-				short_name: "Jenkins Notifier",
+				short_name: 'Jenkins Notifier',
 				description: 'Job status tracking and notifier for jenkins',
 				theme_color: '#ffffff',
 				icons: [

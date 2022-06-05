@@ -1,7 +1,7 @@
 import React from 'react';
 import { Theme } from '@mui/system';
 import styled from '@emotion/styled';
-import { IJobStatus } from '../../db/types';
+import { IJobStatus } from '@db/types';
 import { css, keyframes } from '@emotion/react';
 
 const glow = (color: string) => keyframes`

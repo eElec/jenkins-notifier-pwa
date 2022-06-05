@@ -5,7 +5,7 @@ import {
 } from '@mui/icons-material';
 import { IconButton, TableCell, TableRow } from '@mui/material';
 import React from 'react';
-import { Job } from './../../db/index';
+import { Job } from '@db/index';
 import Progress from './Progress';
 import Status from './Status';
 

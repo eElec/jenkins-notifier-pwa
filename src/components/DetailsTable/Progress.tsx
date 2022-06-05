@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '@mui/system';
-import { css } from '@emotion/react';
 
 type Props = { startTime: number; estDuration: number };
 

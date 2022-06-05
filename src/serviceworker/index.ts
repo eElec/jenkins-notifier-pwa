@@ -1,10 +1,10 @@
 /// <reference no-default-lib="true"/>
 /// <reference lib="es2020" />
 /// <reference lib="WebWorker" />
-import db, { Job } from '../db';
+import db, { Job } from '@db/index';
 import { cleanupOutdatedCaches, precacheAndRoute } from 'workbox-precaching';
 
-import { IJob, IJobResponse } from '../db/types';
+import { IJob, IJobResponse } from '@db/types';
 
 declare let self: ServiceWorkerGlobalScope;
 
