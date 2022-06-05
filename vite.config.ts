@@ -20,7 +20,8 @@ export default defineConfig(({ mode }) => ({
 			],
 			manifest: {
 				name: 'Jenkins Notifier',
-				description: 'Description of your app',
+				short_name: "Jenkins Notifier",
+				description: 'Job status tracking and notifier for jenkins',
 				theme_color: '#ffffff',
 				icons: [
 					{
