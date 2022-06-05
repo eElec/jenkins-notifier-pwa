@@ -13,7 +13,10 @@ type Props = { job: Job; children?: React.ReactNode };
 
 function JobRow({ job, children }: Props) {
 	return (
-		<TableRow sx={{ position: 'relative' }}>
+		<TableRow sx={{ position: 'relative', '&:hover #progress': {
+			fontSize: '8px',
+			height: '10px'
+		} }}>
 			<TableCell>
 				<Status status={job.currentStatus} building={job.building} />
 				{job.alias}
