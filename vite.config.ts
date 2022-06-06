@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
@@ -10,6 +12,7 @@ export default defineConfig(({ mode }) => ({
 			'@src': path.resolve(__dirname, './src/'),
 			'@db': path.resolve(__dirname, './src/db'),
 			'@sw': path.resolve(__dirname, './src/serviceworker'),
+			'@test': path.resolve(__dirname, './test'),
 		},
 	},
 	plugins: [
@@ -66,4 +69,9 @@ export default defineConfig(({ mode }) => ({
 	build: {
 		sourcemap: mode === 'development',
 	},
+	test: {
+		globals: true,
+		environment: 'jsdom',
+		setupFiles: './test/setup.ts'
+	}
 }));

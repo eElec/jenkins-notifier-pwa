@@ -1,0 +1,225 @@
+// Vitest Snapshot v1
+
+exports[`Job Details Table > Status Component > render each building status > failure 1`] = `
+@keyframes animation-0 {
+  0% {
+    box-shadow: 0 0 4px 1px rgb(178, 48, 70);
+  }
+
+  50% {
+    box-shadow: 0 0 4px 3px rgb(178, 48, 70);
+  }
+
+  100% {
+    box-shadow: 0 0 4px 1px rgb(178, 48, 70);
+  }
+}
+
+.emotion-0 {
+  margin-right: 8px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #FF4565;
+  box-shadow: 0px 0px 8px #FF4565;
+  -webkit-animation: animation-0 1s ease infinite;
+  animation: animation-0 1s ease infinite;
+}
+
+<body>
+  <div>
+    <span
+      class="emotion-0 emotion-1"
+    />
+  </div>
+</body>
+`;
+
+exports[`Job Details Table > Status Component > render each building status > no status 1`] = `
+@keyframes animation-0 {
+  0% {
+    box-shadow: 0 0 4px 1px #bdbdbd;
+  }
+
+  50% {
+    box-shadow: 0 0 4px 3px #bdbdbd;
+  }
+
+  100% {
+    box-shadow: 0 0 4px 1px #bdbdbd;
+  }
+}
+
+.emotion-0 {
+  margin-right: 8px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #e0e0e0;
+  box-shadow: 0px 0px 8px #e0e0e0;
+  -webkit-animation: animation-0 1s ease infinite;
+  animation: animation-0 1s ease infinite;
+}
+
+<body>
+  <div>
+    <span
+      class="emotion-0 emotion-1"
+    />
+  </div>
+</body>
+`;
+
+exports[`Job Details Table > Status Component > render each building status > success 1`] = `
+@keyframes animation-0 {
+  0% {
+    box-shadow: 0 0 4px 1px rgb(88, 175, 78);
+  }
+
+  50% {
+    box-shadow: 0 0 4px 3px rgb(88, 175, 78);
+  }
+
+  100% {
+    box-shadow: 0 0 4px 1px rgb(88, 175, 78);
+  }
+}
+
+.emotion-0 {
+  margin-right: 8px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #7FFA70;
+  box-shadow: 0px 0px 8px #7FFA70;
+  -webkit-animation: animation-0 1s ease infinite;
+  animation: animation-0 1s ease infinite;
+}
+
+<body>
+  <div>
+    <span
+      class="emotion-0 emotion-1"
+    />
+  </div>
+</body>
+`;
+
+exports[`Job Details Table > Status Component > render each building status > unstable 1`] = `
+@keyframes animation-0 {
+  0% {
+    box-shadow: 0 0 4px 1px rgb(175, 144, 87);
+  }
+
+  50% {
+    box-shadow: 0 0 4px 3px rgb(175, 144, 87);
+  }
+
+  100% {
+    box-shadow: 0 0 4px 1px rgb(175, 144, 87);
+  }
+}
+
+.emotion-0 {
+  margin-right: 8px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #FACE7D;
+  box-shadow: 0px 0px 8px #FACE7D;
+  -webkit-animation: animation-0 1s ease infinite;
+  animation: animation-0 1s ease infinite;
+}
+
+<body>
+  <div>
+    <span
+      class="emotion-0 emotion-1"
+    />
+  </div>
+</body>
+`;
+
+exports[`Job Details Table > Status Component > render each status > failure 1`] = `
+.emotion-0 {
+  margin-right: 8px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #FF4565;
+  box-shadow: 0px 0px 8px #FF4565;
+}
+
+<body>
+  <div>
+    <span
+      class="emotion-0 emotion-1"
+    />
+  </div>
+</body>
+`;
+
+exports[`Job Details Table > Status Component > render each status > no status 1`] = `
+.emotion-0 {
+  margin-right: 8px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #e0e0e0;
+  box-shadow: 0px 0px 8px #e0e0e0;
+}
+
+<body>
+  <div>
+    <span
+      class="emotion-0 emotion-1"
+    />
+  </div>
+</body>
+`;
+
+exports[`Job Details Table > Status Component > render each status > success 1`] = `
+.emotion-0 {
+  margin-right: 8px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #7FFA70;
+  box-shadow: 0px 0px 8px #7FFA70;
+}
+
+<body>
+  <div>
+    <span
+      class="emotion-0 emotion-1"
+    />
+  </div>
+</body>
+`;
+
+exports[`Job Details Table > Status Component > render each status > unstable 1`] = `
+.emotion-0 {
+  margin-right: 8px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #FACE7D;
+  box-shadow: 0px 0px 8px #FACE7D;
+}
+
+<body>
+  <div>
+    <span
+      class="emotion-0 emotion-1"
+    />
+  </div>
+</body>
+`;

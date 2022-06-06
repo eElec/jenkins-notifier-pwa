@@ -1,8 +1,8 @@
 import React from 'react';
-import { Theme } from '@mui/system';
+import { Theme, PaletteColor } from '@mui/material/styles';
 import styled from '@emotion/styled';
-import { IJobStatus } from '@db/types';
 import { css, keyframes } from '@emotion/react';
+import { IJobStatus } from '@db/types';
 
 const glow = (color: string) => keyframes`
 	0% { box-shadow:0 0 4px 1px ${color} }
@@ -14,7 +14,7 @@ type Props = { building?: boolean; theme?: Theme; status?: IJobStatus };
 
 const Status = styled('span')(({ building, status, theme }: Props) => {
 	if (theme === undefined) return;
-	let palette = theme.palette.success;
+	let palette: PaletteColor | {main: string, dark: string} = theme.palette.success;
 	switch (status) {
 		case 'SUCCESS':
 			palette = theme.palette.success;
