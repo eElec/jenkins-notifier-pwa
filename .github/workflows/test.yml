@@ -29,7 +29,8 @@ jobs:
           node-version: 16.x
 
       # Runs a set of commands using the runners shell
+      - run: corepack enable
       - name: Run tests
         run: |
-          npm ci
-          npm test
+          yarn install --frozen-lockfile
+          yarn test
