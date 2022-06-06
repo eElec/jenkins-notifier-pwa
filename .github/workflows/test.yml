@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-node@v3
         with: 
           node-version: 16.x
-
+          cache: 'yarn'
       # Runs a set of commands using the runners shell
       - run: corepack enable
       - name: Run tests
