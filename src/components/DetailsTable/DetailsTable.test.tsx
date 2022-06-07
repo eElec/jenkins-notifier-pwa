@@ -3,7 +3,6 @@ import { render, screen, cleanup, act } from '@test/util';
 import 'fake-indexeddb/auto';
 import db from '@db/index';
 import DetailsTable from './index';
-import Status from './Status';
 
 describe('Job Details Table', () => {
 	it('renders', () => {

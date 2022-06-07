@@ -10,17 +10,18 @@ import {
 	Paper,
 	TableFooter,
 } from '@mui/material';
-import {
-	Add,
-} from '@mui/icons-material';
+import { Add } from '@mui/icons-material';
 import { useLiveQuery } from 'dexie-react-hooks';
-import db from '@db/index';
+import db, { Job } from '@db/index';
 import JobRow from './JobRow';
 
 function DetailsTable(props: any) {
 	const { openAddDialog } = props;
 
 	const jobs = useLiveQuery(() => db.job.toArray());
+
+	const toggleJobState = (job: Job) => () =>
+		db.job.update(job, { paused: !job.paused });
 
 	return (
 		<TableContainer component={Paper} sx={{ marginTop: '2rem' }}>
@@ -33,7 +34,11 @@ function DetailsTable(props: any) {
 				</TableHead>
 				<TableBody>
 					{jobs?.map((job) => (
-						<JobRow job={job} key={job._id} />
+						<JobRow
+							job={job}
+							key={job._id}
+							toggleJobState={toggleJobState(job)}
+						/>
 					))}
 				</TableBody>
 				<TableFooter>

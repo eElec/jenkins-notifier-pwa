@@ -9,9 +9,9 @@ import { Job } from '@db/index';
 import Progress from './Progress';
 import Status from './Status';
 
-type Props = { job: Job; children?: React.ReactNode };
+type Props = { job: Job; toggleJobState: () => {}; children?: React.ReactNode };
 
-function JobRow({ job, children }: Props) {
+function JobRow({ job, toggleJobState, children }: Props) {
 	return (
 		<TableRow
 			sx={{
@@ -43,7 +43,7 @@ function JobRow({ job, children }: Props) {
 				>
 					<OpenInNew />
 				</IconButton>
-				<IconButton>
+				<IconButton onClick={toggleJobState}>
 					{job.paused ? (
 						<StopCircleOutlined color="error" />
 					) : (
