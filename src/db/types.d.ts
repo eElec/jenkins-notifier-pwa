@@ -1,7 +1,7 @@
 export type IJobStatus = 'SUCCESS' | 'FAILURE' | 'UNSTABLE';
 
 export interface IJobResponse {
-	result?: IJobStatus;
+	result?: IJobStatus | null;
 	number?: number;
 	building?: boolean;
 	timestamp?: number;

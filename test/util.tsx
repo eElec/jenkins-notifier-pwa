@@ -1,5 +1,5 @@
 import { ThemeProvider, PaletteMode } from '@mui/material';
-import { cleanup, render } from '@testing-library/react';
+import { cleanup, render, RenderOptions } from '@testing-library/react';
 import { FC } from 'react';
 import { afterEach } from 'vitest';
 import { theme } from '@src/theme';
@@ -19,9 +19,13 @@ const Wrapper: FC<{ children: React.ReactNode; mode: PaletteMode }> = ({
 	);
 };
 
-const customRender = (ui: React.ReactElement, options = {}, mode: PaletteMode = "dark") =>
+const customRender = (
+	ui: React.ReactElement,
+	options: RenderOptions = {},
+	mode: PaletteMode = 'dark'
+) =>
 	render(ui, {
-		wrapper: ({children}) => <Wrapper mode={mode}>{children}</Wrapper>,
+		wrapper: ({ children }) => <Wrapper mode={mode}>{children}</Wrapper>,
 		...options,
 	});
 
