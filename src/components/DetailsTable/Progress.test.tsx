@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { render, screen, act } from '@test/util';
 import Progress from './Progress';
 
-describe.only('Progress Component', () => {
+describe('Progress Component', () => {
 	const startTime = new Date(2022, 1, 1);
 	const estDuration = 1000 * 60 * 60; // 1 hr
 
@@ -105,7 +105,7 @@ describe.only('Progress Component', () => {
 		});
 	});
 
-	it.only('timer removed on unmount', () => {
+	it('timer removed on unmount', () => {
 		expect(vi.getTimerCount()).toBe(0);
 		const result = render(
 			<Progress startTime={startTime.getTime()} estDuration={estDuration} />
