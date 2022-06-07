@@ -1,6 +1,6 @@
 // Vitest Snapshot v1
 
-exports[`Job Details Table > Status Component > render each building status > failure 1`] = `
+exports[`Status Component > render each building status > failure 1`] = `
 @keyframes animation-0 {
   0% {
     box-shadow: 0 0 4px 1px rgb(178, 48, 70);
@@ -36,7 +36,7 @@ exports[`Job Details Table > Status Component > render each building status > fa
 </body>
 `;
 
-exports[`Job Details Table > Status Component > render each building status > no status 1`] = `
+exports[`Status Component > render each building status > no status 1`] = `
 @keyframes animation-0 {
   0% {
     box-shadow: 0 0 4px 1px #bdbdbd;
@@ -72,7 +72,7 @@ exports[`Job Details Table > Status Component > render each building status > no
 </body>
 `;
 
-exports[`Job Details Table > Status Component > render each building status > success 1`] = `
+exports[`Status Component > render each building status > success 1`] = `
 @keyframes animation-0 {
   0% {
     box-shadow: 0 0 4px 1px rgb(88, 175, 78);
@@ -108,7 +108,7 @@ exports[`Job Details Table > Status Component > render each building status > su
 </body>
 `;
 
-exports[`Job Details Table > Status Component > render each building status > unstable 1`] = `
+exports[`Status Component > render each building status > unstable 1`] = `
 @keyframes animation-0 {
   0% {
     box-shadow: 0 0 4px 1px rgb(175, 144, 87);
@@ -144,7 +144,7 @@ exports[`Job Details Table > Status Component > render each building status > un
 </body>
 `;
 
-exports[`Job Details Table > Status Component > render each status > failure 1`] = `
+exports[`Status Component > render each status > failure 1`] = `
 .emotion-0 {
   margin-right: 8px;
   height: 10px;
@@ -164,7 +164,7 @@ exports[`Job Details Table > Status Component > render each status > failure 1`]
 </body>
 `;
 
-exports[`Job Details Table > Status Component > render each status > no status 1`] = `
+exports[`Status Component > render each status > no status 1`] = `
 .emotion-0 {
   margin-right: 8px;
   height: 10px;
@@ -184,7 +184,7 @@ exports[`Job Details Table > Status Component > render each status > no status 1
 </body>
 `;
 
-exports[`Job Details Table > Status Component > render each status > success 1`] = `
+exports[`Status Component > render each status > success 1`] = `
 .emotion-0 {
   margin-right: 8px;
   height: 10px;
@@ -204,7 +204,7 @@ exports[`Job Details Table > Status Component > render each status > success 1`]
 </body>
 `;
 
-exports[`Job Details Table > Status Component > render each status > unstable 1`] = `
+exports[`Status Component > render each status > unstable 1`] = `
 .emotion-0 {
   margin-right: 8px;
   height: 10px;

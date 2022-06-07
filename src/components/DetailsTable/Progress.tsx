@@ -59,6 +59,7 @@ function Progress(props: Props) {
 			}}
 		>
 			<div
+				data-testid="progress-bar"
 				css={{
 					position: 'absolute',
 					bottom: 0,
@@ -71,9 +72,9 @@ function Progress(props: Props) {
 				}}
 				style={{ width: `${perc}%` }}
 			/>
-			<span>{startString}</span>
-			<span>{msToTime(currentTime - startTime)}</span>
-			<span>{endString}</span>
+			<span data-testid="progress-start">{startString}</span>
+			<span data-testid="progress-elapsed">{msToTime(currentTime - startTime)}</span>
+			<span data-testid="progress-end">{endString}</span>
 		</div>
 	);
 }

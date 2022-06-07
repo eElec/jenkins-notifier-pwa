@@ -1,0 +1,65 @@
+// Vitest Snapshot v1
+
+exports[`Progress Component > renders 1`] = `
+.emotion-0 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  font-size: 0px;
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+
+.emotion-0 span {
+  position: relative;
+  bottom: 1px;
+  color: #fff;
+}
+
+.emotion-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgb(88, 175, 78);
+  height: 100%;
+}
+
+<body>
+  <div>
+    <div
+      class="emotion-0"
+      id="progress"
+    >
+      <div
+        class="emotion-1"
+        data-testid="progress-bar"
+        style="width: 0%;"
+      />
+      <span
+        data-testid="progress-start"
+      >
+        00:00:00
+      </span>
+      <span
+        data-testid="progress-elapsed"
+      >
+        00:00:00
+      </span>
+      <span
+        data-testid="progress-end"
+      >
+        01:00:00
+      </span>
+    </div>
+  </div>
+</body>
+`;
