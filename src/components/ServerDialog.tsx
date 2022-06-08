@@ -115,6 +115,7 @@ function ServerDialog(props: ServerProps) {
 					/>
 					<TextField
 						variant="standard"
+						type="password"
 						value={form.token}
 						label="Token"
 						onChange={handleChange('token')}
