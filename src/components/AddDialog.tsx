@@ -40,20 +40,6 @@ function AddDialog(props: AddProps) {
 	};
 
 	const handleJobAdd = async () => {
-		// const jobExists = await checkJob(formValues.jobName);
-		// if (!jobExists) return;
-
-		// db.jobData
-		// 	.add({
-		// 		name: formValues.jobName,
-		// 		alias: formValues.alias,
-		// 		paused: false,
-		// 		currentStatus: '',
-		// 	})
-		// 	.catch((err) => err);
-		// db.jobResponse.put({
-		// 	name: formValues.jobName,
-		// });
 		const { jobName: name, alias, server } = form;
 		const job = new Job({
 			name,
