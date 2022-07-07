@@ -64,15 +64,19 @@ function processStatus(job: Job, resp: IJobResponse) {
 
 	if (job.number !== resp.number && resp.building) {
 		const estTime = new Date();
-		if(resp.estimatedDuration)
-			estTime.setTime(estTime.getTime() + resp.estimatedDuration)
+		if (resp.estimatedDuration)
+			estTime.setTime(estTime.getTime() + resp.estimatedDuration);
 
 		self.registration.showNotification(
 			`Job '${job.alias} #${resp.number}' Started`,
 			{
 				body: resp.estimatedDuration
-					? `Est: ${estTime.toTimeString().substring(0, 8)} (${msToTime(resp.estimatedDuration)})`
+					? `Est: ${estTime.toTimeString().substring(0, 8)} (${msToTime(
+							resp.estimatedDuration
+					  )})`
 					: undefined,
+				tag: job.name,
+				renotify: true
 			}
 		);
 	} else if (!resp.building) {
@@ -80,6 +84,8 @@ function processStatus(job: Job, resp: IJobResponse) {
 			`Job '${job.alias} #${resp.number}' Completed`,
 			{
 				body: `Status: ${resp.result}`,
+				tag: job.name,
+				renotify: true
 			}
 		);
 	}
